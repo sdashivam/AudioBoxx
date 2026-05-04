@@ -1,0 +1,41 @@
+paths:
+  input_audio: "D:\\ML_ineuron_course\\AudioBoxx\\input\\audio.mp3"
+  output_audio: "D:\\ML_ineuron_course\\AudioBoxx\\output\\arabic_output.mp3"
+  ffmpeg_path: "C:\\Users\\shiva\\ffmpeg-8.1-full_build\\bin"
+  temp_dir: "D:\\ML_ineuron_course\\AudioBoxx\\temp_audio_segments"
+  output_dir: "D:\\ML_ineuron_course\\AudioBoxx\\output"
+
+whisper:
+  model_name: "base"
+  device: null  # null = auto-detect (cuda if available, else cpu)
+  language: "en"
+  beam_size: 5
+  best_of: 5
+  temperature: 0
+  condition_on_previous_text: true
+
+tts:
+  model_name: "tts_models/multilingual/multi-dataset/xtts_v2"
+  device: "cuda"
+  language: "ar"
+  speaker_reference: null  # null = use input_audio as reference
+  output_format: "wav"  # Use WAV instead of MP3 (FFmpeg not required)
+
+seed_vc:
+  enabled: true
+  model_path: "models/seed-tts"  # Path to Seed VC model
+  config_path: "models/seed-tts/config.json"  # Path to model config
+  vocoder_path: "models/seed-tts/vocoder"  # Path to vocoder
+  target_voice_path: null  # Path to target voice sample (null = use input_audio)
+  diffusion_steps: 10
+  length_adjust: 1.0
+  inference_cfg_rate: 0.7
+  f0_condition: false
+  f0_extractor: "rmvpe"  # F0 extractor method
+  auto_f0_adjust: true  # Auto adjust F0
+  f0_predictor: "rmvpe"  # F0 predictor
+  pitch_shift: 0
+
+translation:
+  from_lang: "en"
+  to_lang: "ar"

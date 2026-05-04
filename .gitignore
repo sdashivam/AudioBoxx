@@ -1,0 +1,72 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+venv/
+venviron/
+env/
+ENV/
+
+# =========================
+# IDE / Editor
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Seed-VC (remove from repo)
+# =========================
+src/pipeline/seed-vc/
+seed-vc/
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Logs
+# =========================
+logs/
+*.log
+
+# =========================
+# Audio / Data files
+# =========================
+input/
+output/
+temp_audio_segments/
+*.wav
+*.mp3
+
+# =========================
+# Model files / cache
+# =========================
+.cache/
+*.pt
+*.pth
+*.ckpt
+*.bin
+
+# HuggingFace / Torch cache
+.huggingface/
+torch_cache/
+
+# =========================
+# Build / artifacts
+# =========================
+dist/
+build/
+*.egg-info/
+
+# =========================
+# Env files
+# =========================
+.env
+.env.*
